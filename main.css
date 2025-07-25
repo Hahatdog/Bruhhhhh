@@ -1339,17 +1339,17 @@ body {
 
 .message {
   position: absolute;
-  top: 25vh; /* 25% from the top (75% toward bottom) */
+  top: 45vh; /* Almost center (50% is center) */
   left: 50%;
   transform: translateX(-50%);
-  font-size: 4vmin; /* Bigger font size */
+  font-size: 7vmin; /* Much bigger font */
   font-weight: bold;
   color: #ffeb3b;
   z-index: 1000;
   text-shadow:
-    0 0 0.5vmin #ffd700,
     0 0 1vmin #ffd700,
-    0 0 2vmin #ffd700;
+    0 0 2vmin #ffd700,
+    0 0 3vmin #ffd700;
 }
 
 .typewriter-text {
