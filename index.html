@@ -307,27 +307,31 @@
       </div>
     </div>
 
-<button id="playMusicBtn" style="position: absolute; top: 1vmin; right: 1vmin; z-index: 2000;">
-  Start Music
+    <!-- Music Play Button -->
+<button id="playMusicBtn" style="position: absolute; top: 2vmin; right: 2vmin; z-index: 2000; padding: 0.5rem 1rem; font-size: 1rem; cursor: pointer;">
+  🎵 Play Music
 </button>
 
+<!-- Background Music Audio -->
 <audio id="bgMusic" loop>
-  <source src="https://youtu.be/qHD61OR15r0" type="audio/mpeg">
+  <source src="Passenger.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
+<!-- Script to Trigger Music on Click -->
 <script>
   const btn = document.getElementById('playMusicBtn');
   const music = document.getElementById('bgMusic');
 
   btn.addEventListener('click', () => {
-    music.play();
-    btn.style.display = 'none'; // Hide button after click
+    music.play().then(() => {
+      btn.style.display = 'none'; // Hide button after playing
+    }).catch(err => {
+      console.error('Playback failed:', err);
+    });
   });
 </script>
 
-<button onclick="document.querySelector('audio').play()">Play Music</button>
-    
     <script src="main.js"></script>
   </body>
 </html>
