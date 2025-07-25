@@ -1339,10 +1339,10 @@ body {
 
 .message {
   position: absolute;
-  top: 3vmin;           /* Distance from top */
-  left: 50%;            /* Center horizontally */
+  top: 25vh; /* 25% from the top (75% toward bottom) */
+  left: 50%;
   transform: translateX(-50%);
-  font-size: 2.8vmin;
+  font-size: 4vmin; /* Bigger font size */
   font-weight: bold;
   color: #ffeb3b;
   z-index: 1000;
