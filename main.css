@@ -1339,19 +1339,13 @@ body {
 
 .message {
   position: absolute;
-  top: 45vh;
+  top: 45vh; /* Almost center (50% is center) */
   left: 50%;
   transform: translateX(-50%);
-  width: 90vw; /* limits width to screen */
-  max-width: 1000px;
-  text-align: center;
-  font-size: 6vmin; /* slightly smaller for better fit */
+  font-size: 7vmin; /* Much bigger font */
   font-weight: bold;
   color: #ffeb3b;
-  font-family: inherit;
   z-index: 1000;
-  white-space: nowrap;
-  overflow: hidden;
   text-shadow:
     0 0 1vmin #ffd700,
     0 0 2vmin #ffd700,
@@ -1360,13 +1354,13 @@ body {
 
 .typewriter-text {
   display: inline-block;
+  overflow: hidden;
   border-right: 0.15em solid #ffeb3b;
+  white-space: nowrap;
+  width: 0;
   animation:
     typing 4s steps(40, end) forwards,
     blink-caret 0.75s step-end infinite;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 0;
 }
 
 @keyframes typing {
