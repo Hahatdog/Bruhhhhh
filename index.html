@@ -307,9 +307,24 @@
       </div>
     </div>
 
-<audio autoplay loop hidden>
+<button id="playMusicBtn" style="position: absolute; top: 1vmin; right: 1vmin; z-index: 2000;">
+  Start Music
+</button>
+
+<audio id="bgMusic" loop>
   <source src="https://youtu.be/qHD61OR15r0" type="audio/mpeg">
+  Your browser does not support the audio element.
 </audio>
+
+<script>
+  const btn = document.getElementById('playMusicBtn');
+  const music = document.getElementById('bgMusic');
+
+  btn.addEventListener('click', () => {
+    music.play();
+    btn.style.display = 'none'; // Hide button after click
+  });
+</script>
 
 <button onclick="document.querySelector('audio').play()">Play Music</button>
     
